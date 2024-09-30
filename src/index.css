@@ -1,0 +1,95 @@
+/* Estilo general del contenedor */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las tarjetas */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #28a745; /* Color verde */
+  color: white;
+  padding: 10px;
+  font-size: 1.25rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Estilo para los grupos de entrada */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group-text {
+  background-color: #e9ecef;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+}
+
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 0 5px 5px 0;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+/* Estilo para los botones */
+.btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+}
+
+.btn-link {
+  margin-top: 15px;
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .col-md-5, .col-md-7 {
+    width: 100%;
+  }
+}
