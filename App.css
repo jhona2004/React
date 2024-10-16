@@ -1,0 +1,191 @@
+:root {
+  --max-width: 1200px;
+  --padding-large: 2.5rem;
+  --padding-medium: 1.5rem;
+  --padding-small: 0.75rem;
+  --color-background: #2c2c2c;
+  --color-text: #e0e0e0;
+  --color-primary: #ff9500;
+  --color-primary-dark: #cc7600;
+  --color-secondary: #00bcd4;
+  --color-secondary-dark: #0097a7;
+  --color-border: #444;
+  --color-card-background: #333;
+  --color-hover: #3d3d3d;
+  --border-radius: 8px;
+  --transition-fast: 200ms;
+  --transition-normal: 300ms;
+  --shadow-light: 0 4px 10px rgba(0, 0, 0, 0.15);
+  --shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+#root {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding-large);
+  text-align: center;
+  background-color: var(--color-background);
+}
+
+.logo {
+  height: 6rem;
+  padding: var(--padding-medium);
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 3em var(--color-primary));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 3em var(--color-secondary));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.spin {
+    animation: logo-spin infinite 15s linear;
+  }
+}
+
+.card {
+  background-color: var(--color-card-background);
+  padding: var(--padding-large);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  transition: box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+.card-header {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: bold;
+  padding: var(--padding-small);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: var(--padding-small);
+  display: flex;
+  align-items: center;
+  gap: var(--padding-small);
+}
+
+.input-group-text {
+  background-color: var(--color-hover);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  padding: var(--padding-small);
+  color: var(--color-primary);
+}
+
+.form-control {
+  flex-grow: 1;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--padding-small);
+  background-color: var(--color-card-background);
+  color: var(--color-text);
+  transition: border var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 5px var(--color-primary);
+  outline: none;
+}
+
+.button {
+  display: inline-block;
+  padding: var(--padding-small) var(--padding-medium);
+  border-radius: var(--border-radius);
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: background-color var(--transition-normal);
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+}
+
+.button-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.button-secondary {
+  background-color: var(--color-secondary);
+}
+
+.button-secondary:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+.alert {
+  margin-top: var(--padding-small);
+  padding: var(--padding-small);
+  border-radius: var(--border-radius);
+  font-weight: bold;
+}
+
+.alert-error {
+  color: #f44336;
+}
+
+.alert-success {
+  color: var(--color-primary);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--padding-medium);
+}
+
+.table th,
+.table td {
+  padding: var(--padding-small);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.table tr:hover {
+  background-color: var(--color-hover);
+}
